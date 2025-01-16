@@ -8,7 +8,7 @@ st.title("Product Return Prediction")
 
 
 
-st.header("Upload the CSV file")
+# st.header("Upload the CSV file")
 # uploaded_file = st.file_uploader("Choose a file", type=["csv"])
 uploaded_file = "dataset.csv"
 

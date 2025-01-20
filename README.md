@@ -12,19 +12,15 @@ Source code for this project is available at:
 [https://github.com/anurag-b-cumu/product-return](https://github.com/anurag-b-cumu/product-return)
 
 ### Features
-1. **CSV File Upload**:
-   - Upload a CSV file containing sales and return data.
-   - Ensure the file meets the required structure.
-
-2. **Model Training**:
+1. **Model Training**:
    - Trains Random Forest and Linear Regression models.
-   - Displays performance metrics (accuracy, precision, recall, F1 score).
+   - Displays performance metrics (accuracy).
 
-3. **Return Probability Prediction**:
+2. **Return Probability Prediction**:
    - Predicts the likelihood of a product being returned.
    - Allows product selection from a dropdown menu.
 
-4. **User-Friendly Interface**:
+3. **User-Friendly Interface**:
    - Streamlit-powered UI with separate tabs for each model.
 
 ### Application Components
@@ -37,7 +33,6 @@ The backend processes the data and implements machine learning models using `sci
 
 #### Frontend
 The frontend is developed with Streamlit and provides:
-- File upload functionality.
 - Tabs for model selection.
 - Dropdown menu for product selection.
 - Display of metrics and prediction results.
@@ -87,59 +82,15 @@ The frontend is developed with Streamlit and provides:
   - Efficient for smaller datasets.
 - **Usage**: Provides a probability value between 0 and 1 for returns.
 
-### Required Parameters for Output
-1. **CSV File**:
-   - Contains the following columns:
-     - `Date`: Date of transaction (DD/MM/YYYY).
-     - `Product Name`: Name of the product.
-     - `Product Price`: Price of the product.
-     - `Purchased Item Count`: Quantity purchased.
-     - `Refunded item count`: Number of items refunded.
-     - `Refund on Return`: Refund amount.
-
-2. **Selected Product**:
-   - The product name must match one in the uploaded dataset.
-
-### Prerequisites
-- Python 3.7+
-- Required Python libraries:
-  - pandas
-  - numpy
-  - scikit-learn
-  - streamlit
-
-### Installation
-To run the app locally:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/anurag-b-cumu/product-return.git
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the app:
-   ```bash
-   streamlit run main.py
-   ```
 
 ### How to Use
 1. Access the application at [https://cu-return.streamlit.app/](https://cu-return.streamlit.app/).
-2. Upload a CSV file with sales data.
-3. Navigate to the Random Forest or Linear Regression tab.
-4. Train the selected model and view metrics.
-5. Select a product to predict its return probability.
+2. Navigate to the Random Forest or Linear Regression tab.
+3. Train the selected model and view metrics.
+4. Select a product to predict its return probability.
+
 
 ### Limitations
 - Accuracy depends on the quality and completeness of the data.
 - Predictions may vary between models due to differences in algorithms.
 - Only supports the predefined CSV structure.
-
-### Future Enhancements
-- Incorporate additional machine learning models.
-- Add data visualization for insights.
-- Support for saving and loading trained models.
-
----
-
-For feedback or issues, contact the developer at [anurag.b@cumulations.com](mailto:anurag.b@cumulations.com).

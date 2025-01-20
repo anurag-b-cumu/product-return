@@ -81,12 +81,13 @@ The frontend is developed with Streamlit and provides:
   - Handles non-linear relationships well.
   - Reduces overfitting through ensemble learning.
 - **Usage**:
-  - **How it is used**: The Random Forest model is trained using features such as `Product Name`, `Product Price`, `Purchased Item Count`, and `Refund on Return`. During prediction, it calculates the return probability by evaluating the input product details encoded into numeric form and averaged contextual features like price, purchase count, and refund amount.
+  - **How it is used**: The Random Forest model is trained using features such as `Product Name`, `Product Price`, `Purchased Item Count`, `Return Item Count` and `Refund on Return`. During prediction, it calculates the return probability by evaluating the input product details encoded into numeric form and averaged contextual features like price, purchase count, and refund amount.
   - **Training Process**: The dataset is split into training and testing sets. The model learns patterns from the training set by creating multiple decision trees and combining their predictions to reduce overfitting and improve accuracy. The target variable, `Returned`, is binary (0 for not returned, 1 for returned).
   - **Prediction Parameters**:
     - Product Name (encoded)
     - Average Product Price
     - Average Purchased Item Count
+    - Average Return Item Count
     - Average Refund on Return
   - **Input Required**: A valid product name present in the dataset. The model uses the encoded product name along with averaged contextual feature values to predict the return probability.
 
@@ -96,12 +97,13 @@ The frontend is developed with Streamlit and provides:
   - Simple and interpretable.
   - Efficient for smaller datasets.
 - **Usage**:
-  - **How it is used**: The Linear Regression model is trained using the same features as the Random Forest model: `Product Name`, `Product Price`, `Purchased Item Count`, and `Refund on Return`. It outputs a continuous probability score between 0 and 1, representing the likelihood of a return.
+  - **How it is used**: The Linear Regression model is trained using the same features as the Random Forest model: `Product Name`, `Product Price`, `Purchased Item Count`, `Return Item Count` and `Refund on Return`. It outputs a continuous probability score between 0 and 1, representing the likelihood of a return.
   - **Training Process**: The dataset is scaled using `StandardScaler` to normalize feature values. The model minimizes the difference between predicted and actual values for the `Returned` column using regression techniques. Predictions are clamped between 0 and 1 to ensure valid probability values.
   - **Prediction Parameters**:
     - Product Name (encoded and scaled)
     - Scaled Product Price
     - Scaled Purchased Item Count
+    - Scaled Return Item Count
     - Scaled Refund on Return
   - **Input Required**: A valid product name from the dataset. The model transforms the input data into scaled features and predicts the return probability based on learned patterns.
  

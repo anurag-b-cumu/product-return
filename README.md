@@ -142,4 +142,4 @@ To run the app locally:
 
 ---
 
-For feedback or issues, contact the developer at [developer@example.com](mailto:developer@example.com).
+For feedback or issues, contact the developer at [anurag.b@cumulations.com](mailto:anurag.b@cumulations.com).
